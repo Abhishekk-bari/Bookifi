@@ -1,0 +1,18 @@
+/* Style the video to cover the entire window */
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; /* Ensure the video is behind other content */
+}
+
+/* Style for overlay content */
+.content {
+    position: relative;
+    z-index: 1; /* Ensure content is above the video */
+    color: white; /* Adjust text color for visibility */
+    text-align: center; /* Center align text */
+    padding: 20px;
+}
