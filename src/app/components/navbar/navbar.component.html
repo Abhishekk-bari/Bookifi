@@ -1,17 +1,19 @@
-<nav class="flex justify-between py-2 px-20 bg-gray-900 shadow-md w-full max-w-6xl mx-auto rounded-3xl">
+<nav class="flex justify-between py-2 px-1 w-full max-w-6xl mx-auto cursor-pointer">
   <!-- Profile Picture -->
   <div class="flex items-center space-x-3">
-      <img
-          src='/public/man.png'
-          alt="Profile"
-          className="w-10 h-10 rounded-full object-cover"
-      />
+      <h1 class="text-[#343434] text-2xl hover:text-black hover:font-bold  ">Elis Wal</h1>
   </div>
 
+
   <!-- Status Text -->
-  <div class="text-gray-100 text-sm gap-10 flex items-center space-x-1">
-      <span class="bg-red-500 w-2 h-2 rounded-full inline-block"></span>
-      <span class="text-yellow-200">Bookings open</span>
-      <p-button class="text-white hover:bg-blue-700 rounded-xl p-1" label="Submit" />
+  <div class="text-gray-100 text-sm flex items-center space-x-8">
+      <span class="bg-red-600 w-2 h-2 rounded-full inline-block"></span>
+      <span class="text-[#343434]">Bookings open</span>
+      <p-button class="text-[#343434] hover:bg-zinc-300 rounded-xl p-1" label="Admin" />
+  </div>
+  <div class="flex list-none gap-20 ">
+    <li class="hover:text-black text-lg"><a routerLink="/">Home</a></li>
+      <li class="hover:text-black text-lg"><a routerLink="/about">About</a></li>
+      <li class="text-lg hover:text-black"><a routerLink="/work">Work</a></li>
   </div>
 </nav>

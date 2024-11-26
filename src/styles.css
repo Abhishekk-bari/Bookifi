@@ -15,3 +15,7 @@
     font-family: 'ApothemCapsMedium';
     src: url('../src/fonts/ApothemCaps-Medium.ttf');
   }
+@font-face {
+    font-family: 'ApothemCapsRegular';
+    src: url('../src/fonts/ApothemCaps-Regular.ttf');
+}
