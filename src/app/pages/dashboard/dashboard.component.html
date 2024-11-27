@@ -1,10 +1,17 @@
-<div class="p-6">
-    <h1 class="text-2xl font-semibold mb-4">Admin Dashboard</h1>
-    <button
-      (click)="logout()"
-      class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
-    >
-      Logout
-    </button>
+<div class="flex justify-between">
+  <div class="w-28 bg-white bg-opacity-50 backdrop-blur-sm">
+    <div class="p-6 pt-[41vw] w-full flex justify-center">
+      <button (click)="logout()" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">
+        Logout
+      </button>
+    </div>
   </div>
-  
+  <div class="flex-grow flex items-center justify-center pb-[35vw]">
+    <div class="text-center">
+      <h1 class="text-3xl font-bold underline">
+        Admin Dashboard
+      </h1>
+      <p>This is the admin dashboard.</p>
+    </div>
+  </div>
+</div>

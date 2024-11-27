@@ -10,7 +10,7 @@ const routes: Routes = [
   {path: '', component: HomeComponent },
   {path: 'about', component: AboutComponent },
   { path: 'work', component: WorkComponent },
-  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
+  { path: 'dashboard', component: DashboardComponent },
   { path: '**', redirectTo: '/' } // Redirect unknown routes
 ];
 

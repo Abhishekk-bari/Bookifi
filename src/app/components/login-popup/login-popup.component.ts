@@ -9,8 +9,8 @@ import { AuthService } from '../../auth.service';
 })
 export class LoginPopupComponent {
   @Output() close = new EventEmitter<void>();
-  username= '';
-  password= '';
+  username= 'admin';
+  password= 'password';
 
   constructor(private authService: AuthService, private router: Router) {}
   

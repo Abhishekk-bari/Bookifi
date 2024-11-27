@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   styleUrl: './dashboard.component.css'
 })
 export class DashboardComponent {
+sidebarVisible: any;
   constructor(private router: Router) {}
 
   logout() {
