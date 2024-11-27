@@ -9,7 +9,7 @@
   <div class="text-gray-100 text-sm flex items-center space-x-8">
       <span class="bg-red-600 w-2 h-2 rounded-full inline-block"></span>
       <span class="text-[#343434]">Bookings open</span>
-      <p-button class="text-[#343434] hover:bg-zinc-300 rounded-xl p-1" label="Admin" />
+      <button (click)="openLoginPopup()" class="text-[#343434] hover:bg-zinc-300 rounded-xl p-1">Admin</button>
   </div>
   <div class="flex list-none gap-20 ">
     <li class="hover:text-black text-lg"><a routerLink="/">Home</a></li>
@@ -17,3 +17,5 @@
       <li class="text-lg hover:text-black"><a routerLink="/work">Work</a></li>
   </div>
 </nav>
+<app-login-popup *ngIf="showLoginPopup" (close)="closeLoginPopup()"></app-login-popup>
+

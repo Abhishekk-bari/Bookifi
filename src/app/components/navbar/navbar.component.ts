@@ -6,11 +6,13 @@ import { Component } from '@angular/core';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-  
-  
+  showLoginPopup = false; // Add a state to track the popup visibility
 
-  toggleMenu() {
-  
+  openLoginPopup() {
+    this.showLoginPopup = true;
   }
 
+  closeLoginPopup() {
+    this.showLoginPopup = false;
+  }
 }
