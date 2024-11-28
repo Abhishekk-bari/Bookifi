@@ -19,3 +19,7 @@
     font-family: 'ApothemCapsRegular';
     src: url('../src/fonts/ApothemCaps-Regular.ttf');
 }
+@font-face {
+    font-family: 'LoveNature';
+    src: url('../src/fonts/Love Nature.otf');
+}

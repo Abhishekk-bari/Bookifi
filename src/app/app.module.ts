@@ -12,6 +12,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LoginPopupComponent } from './components/login-popup/login-popup.component';
 import { AuthGuard } from './auth.guard';
 import { AuthService } from './auth.service';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,8 @@ import { AuthService } from './auth.service';
     WorkComponent,
     DashboardComponent,
     LoginPopupComponent,
+    FooterComponent
+    
   ],
   imports: [
     BrowserModule,
