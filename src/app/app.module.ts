@@ -13,6 +13,7 @@ import { LoginPopupComponent } from './components/login-popup/login-popup.compon
 import { AuthGuard } from './auth.guard';
 import { AuthService } from './auth.service';
 import { FooterComponent } from './footer/footer.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FooterComponent } from './footer/footer.component';
     WorkComponent,
     DashboardComponent,
     LoginPopupComponent,
-    FooterComponent
+    FooterComponent,
+    ContactComponent
     
   ],
   imports: [
