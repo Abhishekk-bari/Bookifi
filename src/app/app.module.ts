@@ -15,6 +15,8 @@ import { AuthService } from './auth.service';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,12 @@ import { HttpClientModule } from '@angular/common/http';
     
   ],
   imports: [
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      timeOut: 1000, // Toast timeout in milliseconds
+      positionClass: 'toast-top-right', // Position of the toast
+      preventDuplicates: true, // Prevent duplicate toasts
+    }),
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,

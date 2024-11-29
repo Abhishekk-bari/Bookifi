@@ -1,0 +1,12 @@
+.toast-success {
+    background-color: #28a745 !important;
+    color: white !important;
+  }
+  .toast-error {
+    background-color: #dc3545 !important;
+    color: white !important;
+  }
+  /* Ensure this is added to your global styles if it's missing */
+.toast-container {
+  z-index: 9999 !important; /* Ensure toasts appear on top */
+}
