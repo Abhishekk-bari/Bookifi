@@ -12,11 +12,12 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LoginPopupComponent } from './components/login-popup/login-popup.component';
 import { AuthGuard } from './auth.guard';
 import { AuthService } from './auth.service';
-import { FooterComponent } from './footer/footer.component';
-import { ContactComponent } from './contact/contact.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { ContactComponent } from './components/contact/contact.component';
+import { TestimonialComponent } from './components/testimonial/testimonial.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ToastrModule } from 'ngx-toastr';
     DashboardComponent,
     LoginPopupComponent,
     FooterComponent,
-    ContactComponent
+    ContactComponent,
+    TestimonialComponent
     
   ],
   imports: [
@@ -43,7 +45,8 @@ import { ToastrModule } from 'ngx-toastr';
     AppRoutingModule,
     ButtonModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+   
     
   ],
   providers: [AuthGuard, AuthService],

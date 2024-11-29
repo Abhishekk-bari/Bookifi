@@ -5,7 +5,7 @@ import { HomeComponent } from './components/home/home.component';
 import { WorkComponent } from './pages/work/work.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { AuthGuard } from './auth.guard';
-import { ContactComponent } from './contact/contact.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },

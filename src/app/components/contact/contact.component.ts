@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormService } from '../form.service';
+import { FormService } from '../../form.service';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({

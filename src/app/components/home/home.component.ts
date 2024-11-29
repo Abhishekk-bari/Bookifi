@@ -1,13 +1,22 @@
-import { Component, AfterViewInit, ViewChild, ElementRef, OnDestroy } from '@angular/core';
+import {
+  Component,
+  AfterViewInit,
+  ViewChild,
+  ElementRef,
+  OnDestroy,
+  HostListener,
+} from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrls: ['./home.component.css'], // Fixed 'styleUrls' typo
 })
-export class HomeComponent implements AfterViewInit, OnDestroy  {
+export class HomeComponent implements AfterViewInit, OnDestroy {
   @ViewChild('slider') sliderRef!: ElementRef;
+  @ViewChild('scrollDiv') scrollDivRef!: ElementRef; // Reference to the div to hide
   private scrollInterval: any;
+  private lastScrollTop: number = 0;
 
   ngAfterViewInit() {
     const slider = this.sliderRef.nativeElement;
@@ -26,7 +35,26 @@ export class HomeComponent implements AfterViewInit, OnDestroy  {
         slider.scrollLeft = 0;
       }
       slider.scrollBy({ left: 10, behavior: 'smooth' }); // Smooth scroll by 10px for fast speed
-    },10); // Adjust speed by changing interval time
+    }, 10); // Adjust speed by changing interval time
+  }
+
+  // Listener for scroll event
+  @HostListener('window:scroll', [])
+  onScroll() {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+    if (scrollTop > this.lastScrollTop) {
+      // Scrolling down: hide the div
+      this.scrollDivRef.nativeElement.style.opacity = '0';
+      this.scrollDivRef.nativeElement.style.transform = 'translateY(-50px)';
+      this.scrollDivRef.nativeElement.style.transition = 'opacity 0.5s, transform 0.5s';
+    } else {
+      // Scrolling up: show the div
+      this.scrollDivRef.nativeElement.style.opacity = '1';
+      this.scrollDivRef.nativeElement.style.transform = 'translateY(0)';
+    }
+
+    this.lastScrollTop = scrollTop;
   }
 
   ngOnDestroy() {
