@@ -7,6 +7,9 @@ import { Router } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+iscontact(): any {
+throw new Error('Method not implemented.');
+}
   title = 'site';
 
   constructor(private router: Router) {}
