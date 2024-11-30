@@ -35,4 +35,11 @@
   .toast-container {
     z-index: 9999 !important; /* Ensure toast appears on top */
   }
-  
+  /* Hide scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
