@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 
 
 @Component({
@@ -11,9 +11,17 @@ export class AppComponent {
 iscontact(): any {
 throw new Error('Method not implemented.');
 }
-  title = 'site';
 
-  constructor(private router: Router) {}
+  title = 'site';
+  showNavbar: boolean = true;
+
+  constructor(private router: Router) {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.showNavbar = !['/dashboard'].includes(event.url);
+      }
+    });
+  }
 
   isDashboard(): boolean {
     return this.router.url === '/dashboard';

@@ -1,17 +1,91 @@
-<div class="flex justify-between">
-  <div class="w-28 bg-white bg-opacity-50 backdrop-blur-sm">
-    <div class="p-6 pt-[41vw] w-full flex justify-center">
-      <button (click)="logout()" class="bg-[#b4e925] hover:bg-lime-200 text-black font-bold py-2 px-4 rounded-full">
-        Logout
-      </button>
+<div class="flex h-screen">
+  <!-- Sidebar -->
+  <aside class="w-50 bg-white shadow-md pt-10">
+    <div class="p-6">
+      <h1 class="text-xl font-bold">Jackson Carter</h1>
+      <p class="text-sm text-gray-500">Photographer</p>
     </div>
-  </div>
-  <div class="flex-grow flex items-center justify-center pb-[35vw]">
-    <div class="text-center">
-      <h1 class="text-3xl font-bold underline">
-        Admin Dashboard
-      </h1>
-      <p>This is the admin dashboard.</p>
-    </div>
+    <nav class="pt-20">
+      <ul>
+        <li class="mb-2">
+          <a [routerLink]="['/home']" class="pb-5 flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200 rounded">
+            <span class="text-lg">🏠</span>
+            <span class="ml-3">Explore</span>
+          </a>
+        </li>
+        <li class="mb-2">
+          <a href="#" class="pb-5 flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200 rounded">
+            <span class="text-lg">🛒</span>
+            <span class="ml-3">Boutique</span>
+          </a>
+        </li>
+        <li class="mb-2">
+          <a href="#" class="pb-5 flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200 rounded">
+            <span class="text-lg">📁</span>
+            <span class="ml-3">Projects</span>
+          </a>
+        </li>
+        <li class="mb-2">
+          <a href="#" class="pb-5 flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200 rounded">
+            <span class="text-lg">💼</span>
+            <span class="ml-3">Services</span>
+          </a>
+        </li>
+        
+        <!-- Adjusted Logout Icon -->
+        <div class="pt-20">
+          <button (click)="logout()" class="ml-3 items-center px-4 py-2 text-gray-700 hover:bg-gray-200 rounded">
+            <span class="text-lg">↩</span> Logout  <!-- Adjusted icon to a door emoji -->
+          </button>
+        </div>
+      </ul>
+    </nav>
+    <hr class="my-6 border-gray-200">
+  </aside>
+  <!-- Main Content -->
+  <div class="flex-1 pl-20 pt-20 justify-center bg-gray-100">
+    <h1 class="text-6xl font-bold">Hey, Admin</h1>
+    <p class="mt-4 text-2xl  text-gray-600">
+      Welcome to your dashboard! Here you can manage bookings, view clients, and track your photography sessions.
+    </p>
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  -->
