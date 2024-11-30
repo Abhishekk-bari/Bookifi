@@ -18,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { ContactComponent } from './components/contact/contact.component';
 import { TestimonialComponent } from './components/testimonial/testimonial.component';
+import { MoreComponent } from './components/more/more.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { TestimonialComponent } from './components/testimonial/testimonial.compo
     LoginPopupComponent,
     FooterComponent,
     ContactComponent,
-    TestimonialComponent
+    TestimonialComponent,
+    MoreComponent
     
   ],
   imports: [

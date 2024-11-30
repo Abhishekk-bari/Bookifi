@@ -12,9 +12,9 @@
       <button (click)="openLoginPopup()" class="text-[#343434] hover:bg-lime-200 rounded-xl p-1">Admin</button>
   </div>
   <div class="flex list-none gap-20 ">
-    <li class="hover:text-black text-lg"><a routerLink="/">Home</a></li>
-      <li class="hover:text-black text-lg"><a routerLink="/about">About</a></li>
-      <li class="text-lg hover:text-black"><a routerLink="/work">Work</a></li>
+    <li class="hover:text-[#b4e925] text-lg"><a routerLink="/">Home</a></li>
+      <li class="hover:text-[#b4e925] text-lg"><a routerLink="/about">About</a></li>
+      <li class="text-lg hover:text-[#b4e925]"><a routerLink="/work">Work</a></li>
   </div>
 </nav>
 <app-login-popup *ngIf="showLoginPopup" (close)="closeLoginPopup()"></app-login-popup>
