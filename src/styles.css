@@ -16,12 +16,20 @@
     src: url('../src/fonts/ApothemCaps-Medium.ttf');
   }
 @font-face {
+    font-family: 'MerryNotes';
+    src: url('../src/fonts/Merry Notes.otf');
+  }
+@font-face {
     font-family: 'ApothemCapsRegular';
     src: url('../src/fonts/ApothemCaps-Regular.ttf');
 }
 @font-face {
     font-family: 'LoveNature';
     src: url('../src/fonts/Love Nature.otf');
+}
+@font-face {
+    font-family: 'Audie';
+    src: url('../src/fonts/Audie.ttf');
 }
 
 .toast-success {

@@ -1,91 +1,158 @@
-<div class="flex h-screen">
+<div class="flex min-h-screen">
   <!-- Sidebar -->
-  <aside class="w-50 bg-white shadow-md pt-10">
-    <div class="p-6">
-      <h1 class="text-xl font-bold">Jackson Carter</h1>
-      <p class="text-sm text-gray-500">Photographer</p>
+  <aside
+    [class.w-16]="isCollapsed"
+    [class.w-64]="!isCollapsed"
+    class=" transition-all duration-300 "
+  >
+    <div class="p-6 flex items-center justify-between ">
+      <div *ngIf="!isCollapsed" class="transition-opacity duration-300">
+        <h1 class="text-xl">FINNEGAN MONROE</h1>
+        <p class="text-sm text-zinc-900">Photographer</p>
+      </div>
+      <!-- Toggle Button -->
+      <button
+        (click)="toggleSidebar()"
+        class="p-1 bg-gray-200 hover:bg-lime-200 rounded-full"
+      >
+      
+        <span *ngIf="isCollapsed">➔</span>
+        <span *ngIf="!isCollapsed">←</span>
+      </button>
     </div>
-    <nav class="pt-20">
+    <nav class=" fixed pt-10 font-semibold">
       <ul>
         <li class="mb-2">
-          <a [routerLink]="['/home']" class="pb-5 flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200 rounded">
+          <a
+            [routerLink]="['/home']"
+            class="flex items-center px-4 py-2 text-gray-700 hover:bg-lime-200 rounded"
+          >
             <span class="text-lg">🏠</span>
-            <span class="ml-3">Explore</span>
+            <span
+              *ngIf="!isCollapsed"
+              class="ml-3 transition-opacity duration-300"
+            >
+              Explore
+            </span>
           </a>
         </li>
         <li class="mb-2">
-          <a href="#" class="pb-5 flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200 rounded">
+          <a
+            href="#"
+            class="flex items-center px-4 py-2 text-gray-700 hover:bg-lime-200 rounded"
+          >
             <span class="text-lg">🛒</span>
-            <span class="ml-3">Boutique</span>
+            <span
+              *ngIf="!isCollapsed"
+              class="ml-3 transition-opacity duration-300"
+            >
+              Boutique
+            </span>
           </a>
         </li>
         <li class="mb-2">
-          <a href="#" class="pb-5 flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200 rounded">
+          <a
+            href="#"
+            class="flex items-center px-4 py-2 text-gray-700 hover:bg-lime-200 rounded"
+          >
             <span class="text-lg">📁</span>
-            <span class="ml-3">Projects</span>
+            <span
+              *ngIf="!isCollapsed"
+              class="ml-3 transition-opacity duration-300"
+            >
+              Projects
+            </span>
           </a>
         </li>
         <li class="mb-2">
-          <a href="#" class="pb-5 flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200 rounded">
+          <a
+            href="#"
+            class="flex items-center px-4 py-2 text-gray-700 hover:bg-lime-200 rounded"
+          >
             <span class="text-lg">💼</span>
-            <span class="ml-3">Services</span>
+            <span
+              *ngIf="!isCollapsed"
+              class="ml-3 transition-opacity duration-300"
+            >
+              Services
+            </span>
           </a>
         </li>
-        
-        <!-- Adjusted Logout Icon -->
-        <div class="pt-20">
-          <button (click)="logout()" class="ml-3 items-center px-4 py-2 text-gray-700 hover:bg-gray-200 rounded">
-            <span class="text-lg">↩</span> Logout  <!-- Adjusted icon to a door emoji -->
+        <div class="pt-10">
+          <button
+            (click)="logout()"
+            class="flex items-center px-4 py-2 text-gray-700 hover:bg-lime-200 rounded"
+          >
+            <span class="text-lg">↩</span>
+            <span
+              *ngIf="!isCollapsed"
+              class="ml-3 transition-opacity duration-300"
+            >
+              Logout
+            </span>
           </button>
         </div>
       </ul>
     </nav>
-    <hr class="my-6 border-gray-200">
+    <hr class="my-6 border-gray-200" />
   </aside>
-  <!-- Main Content -->
-  <div class="flex-1 pl-20 pt-20 justify-center bg-gray-100">
-    <h1 class="text-6xl font-bold">Hey, Admin</h1>
-    <p class="mt-4 text-2xl  text-gray-600">
-      Welcome to your dashboard! Here you can manage bookings, view clients, and track your photography sessions.
+
+
+<!-- Main Content -->
+
+<div class="flex-1 pl-14   m-5 overflow-y-auto">
+  <!-- Greeting Section -->
+  <h1 class="text-6xl text-black font-bold font-[MerryNotes]">Hello, Admin 👋</h1>
+  <h2 class="font-semibold text-lime-600">Today: {{currentDate | date}}</h2>
+  <p class="mt-6 text-xl text-gray-800">
+    Welcome to your dashboard! Here you can manage bookings, view clients, and
+    track your photography sessions.
+  </p>
+
+  <!-- Daily Motivation Section -->
+  <div class="mt-10 p-6 bg-black rounded-lg shadow-md">
+    <h2 class="text-2xl font-[Audie] text-white">Daily Motivation 🌟</h2>
+    <p class="mt-4 text-lg italic text-white">
+      "Success is not the key to happiness. Happiness is the key to success. If
+      you love what you are doing, you will be successful." - Albert Schweitzer
     </p>
   </div>
+
+  <!-- Additional Welcome Content -->
+  <div class="mt-10 p-6 border border-black rounded-lg shadow-md">
+    <h2 class="text-2xl font-[Audie] text-gray-800">What's Next for Today? 🗓️</h2>
+    <p class="mt-4 text-lg text-gray-700">
+      Don’t forget to check your calendar for upcoming bookings, reply to any
+      pending client messages, and ensure ongoing projects are on track.
+    </p>
+    <ul class="list-disc mt-4 ml-6 text-lg text-gray-700">
+      <li>Review your recent bookings.</li>
+      <li>Analyze client engagement stats.</li>
+      <li>Plan your next photography session.</li>
+    </ul>
+  </div>
+
+  <!-- Statistics Section -->
+  <div class="grid grid-cols-1  md:grid-cols-3 gap-2 mt-10">
+    <div class="p-6 border border-zinc-900 rounded-lg shadow-md text-center">
+      <h2 class="text-4xl font-bold text-black">50</h2>
+      <p class="mt-2 textblack">Total Bookings</p>
+    </div>
+    <div class="p-6 border border-zinc-900 rounded-lg shadow-md text-center">
+      <h2 class="text-4xl font-bold text-black">15</h2>
+      <p class="mt-2 text-black">Active Clients</p>
+    </div>
+    <div class="p-6 border border-zinc-900 rounded-lg shadow-md text-center">
+      <h2 class="text-4xl font-bold text-black">5</h2>
+      <p class="mt-2 text-black">Ongoing Projects</p>
+    </div>
+  </div>
+
+  
 </div>
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--  -->
+</div>
