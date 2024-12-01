@@ -1,0 +1,53 @@
+<!-- Main Content -->
+
+<div class="flex-1 pl-10  m-5 overflow-y-auto">
+    <router-outlet></router-outlet>
+    <!-- Greeting Section -->
+    <h1 class="text-6xl text-black font-bold font-[MerryNotes]">Hello, Admin 👋</h1>
+    <h2 class="font-semibold text-lime-600">Today: {{currentDate | date}}</h2>
+    <p class="mt-6 text-xl text-gray-800">
+      Welcome to your dashboard! Here you can manage bookings, view clients, and
+      track your photography sessions.
+    </p>
+  
+    <!-- Daily Motivation Section -->
+    <div class="mt-10 p-2 bg-zinc-900 rounded-lg shadow-md">
+      <h2 class="text-2xl font-[Audie] text-white">Daily Motivation 🌟</h2>
+      <p class="mt-4 text-lg italic text-white">
+        "Success is not the key to happiness. Happiness is the key to success. If
+        you love what you are doing, you will be successful." - Albert Schweitzer
+      </p>
+    </div>
+  
+    <!-- Additional Welcome Content -->
+    <div class="mt-10 p-6 border border-black rounded-lg shadow-md">
+      <h2 class="text-2xl font-[Audie] text-gray-800">What's Next for Today? 🗓️</h2>
+      <p class="mt-4 text-lg text-gray-700">
+        Don’t forget to check your calendar for upcoming bookings, reply to any
+        pending client messages, and ensure ongoing projects are on track.
+      </p>
+      <ul class="list-disc mt-4 ml-6 text-lg text-gray-700">
+        <li>Review your recent bookings.</li>
+        <li>Analyze client engagement stats.</li>
+        <li>Plan your next photography session.</li>
+      </ul>
+    </div>
+  
+    <!-- Statistics Section -->
+    <div class="grid grid-cols-1  md:grid-cols-3 gap-2 mt-10">
+      <div class="p-6 border border-zinc-900 rounded-lg hover:bg-lime-100 shadow-md text-center">
+        <h2 class="text-4xl font-bold text-black">50</h2>
+        <p class="mt-2 textblack">Total Bookings</p>
+      </div>
+      <div class="p-6 border border-zinc-900 rounded-lg shadow-md text-center hover:bg-lime-100">
+        <h2 class="text-4xl font-bold text-black">15</h2>
+        <p class="mt-2 text-black">Active Clients</p>
+      </div>
+      <div class="p-6 border border-zinc-900 rounded-lg shadow-md text-center hover:bg-lime-100">
+        <h2 class="text-4xl font-bold text-black">5</h2>
+        <p class="mt-2 text-black">Ongoing Projects</p>
+      </div>
+    </div>
+    <hr class="border-t-2 border-gray-300 my-4" />
+    <p>All copyrights are Reserved ©</p>
+  </div>

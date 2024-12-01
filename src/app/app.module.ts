@@ -19,6 +19,8 @@ import { ToastrModule } from 'ngx-toastr';
 import { ContactComponent } from './components/contact/contact.component';
 import { TestimonialComponent } from './components/testimonial/testimonial.component';
 import { MoreComponent } from './components/more/more.component';
+import { ListComponent } from './pages/list/list.component';
+import { DashHomeComponent } from './pages/dash-home/dash-home.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { MoreComponent } from './components/more/more.component';
     FooterComponent,
     ContactComponent,
     TestimonialComponent,
-    MoreComponent
+    MoreComponent,
+    ListComponent,
+    DashHomeComponent
     
   ],
   imports: [
