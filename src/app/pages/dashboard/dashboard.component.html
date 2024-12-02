@@ -3,17 +3,17 @@
   <aside
     [class.w-16]="isCollapsed"
     [class.w-64]="!isCollapsed"
-    class=" transition-all duration-300 "
+    class=" transition-all duration-300 pr-5"
   >
-    <div class="p-6 flex items-center justify-between ">
+    <div class="p-4 flex items-center justify-between ">
       <div *ngIf="!isCollapsed" class="transition-opacity duration-300">
-        <h1 class="text-xl">FINNEGAN MONROE</h1>
+        <h1 class="text-xl font-bold">FINNEGAN MONROE</h1>
         <p class="text-sm text-zinc-900">Photographer</p>
       </div>
       <!-- Toggle Button -->
       <button
         (click)="toggleSidebar()"
-        class="p-1 bg-gray-200 hover:bg-lime-200 rounded-full">
+        class="p-1 text-white bg-blue-600 rounded-full ">
         <span *ngIf="isCollapsed">➔</span>
         <span *ngIf="!isCollapsed">←</span>
       </button>
@@ -95,7 +95,7 @@
   </aside>
 
   <!-- Main Content -->
-  <div class="flex-1 pl-10 m-5 overflow-y-auto">
+  <div class="flex-1 m-5 ">
     <router-outlet></router-outlet> <!-- Child routes load here -->
   </div>
 </div>

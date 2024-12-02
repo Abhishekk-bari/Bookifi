@@ -1,16 +1,27 @@
 <div class="flex min-h-screen"> 
-    <div class="flex-1 pl-10 m-5 overflow-y-auto">
-        <h1 class="text-8xl text-black font-[LoveNature] ">Bookings</h1>
-        <p class="text-xl ">Manage Your Bookings Effortlessly ✍</p>
+    <div class="flex-1 m-1">
+        <div>
+            <h1 class="text-6xl text-black font-[LoveNature]">Bookings</h1>
+                <p class="text-xl">Manage Your Bookings Effortlessly ✍</p>
+                <hr class="border-t-2 border-gray-300 my-4" />  
+        </div>
+        <div class="search_bar text-end pr-20">
+            <input type="search" [(ngModel)]="search"(input)="onSearchChange()" 
+            placeholder="Search for names.." 
+            class="pl-2 border border-zinc-800 rounded-lg " />
+            <button class="text-lg">🔎</button>
+        </div>
+        
+       
 
-        <div class="text-center pl-5 justify-center items-center pt-20">
+        <div class="text-center pl-10 justify-center items-center pt-20">
             <table class="min-w-[70vw]  border-collapse border border-gray-300">
                 <thead>
                   <tr class="text-xl text-white">
-                    <th class="border border-gray-400 bg-gray-950  px-4 py-2">Name</th>
-                    <th class="border border-gray-800 px-4 py-2 bg-gray-950 text-white">Email</th>
-                    <th class="border border-gray-800 px-4 py-2 bg-gray-950 text-white">Message</th>
-                    <th class="border border-gray-800 px-4 py-1 bg-gray-950 text-white">Date</th>
+                    <th class="border border-gray-400 bg-blue-700 px-4 py-2">Name</th>
+                    <th class="border border-gray-400 px-4 py-2 bg-blue-700 text-white">Email</th>
+                    <th class="border border-gray-400 px-4 py-2 bg-blue-700 text-white">Message</th>
+                    <th class="border border-gray-400 px-4 py-1 bg-blue-700 text-white">Date</th>
                   </tr>
                 </thead>
                 <tbody>

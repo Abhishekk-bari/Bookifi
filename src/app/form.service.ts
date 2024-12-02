@@ -15,10 +15,10 @@ export class FormService {
     return this.http.post(this.apiUrl, data, { responseType: 'json' });
   }
 
-  //fetch booking data
-  fetchBooking(): Observable<any> {
-    return this.http.get(this.fetchUrl);
+  // Fetch booking data with optional search term
+  fetchBooking(search: string = ''): Observable<any> {
+    const url = `${this.fetchUrl}?name=${encodeURIComponent(search)}`;
+    return this.http.get(url);
   }
-
 
 }
