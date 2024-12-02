@@ -11,6 +11,8 @@ export class ListComponent implements OnInit{
   bookings: any[] = [];
   search: string = '';  //store search term
 
+  
+
   constructor(private formService: FormService ,  private http: HttpClient) {}
     ngOnInit(): void {
       this.loadBookings();
