@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'work', component: WorkComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard], 
+  { path: 'dashboard', component: DashboardComponent,  
     children: [
       { path: '', component: DashHomeComponent },
       { path: 'list', component: ListComponent },
@@ -29,3 +29,5 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
+
+// canActivate: [AuthGuard],

@@ -1,1 +1,28 @@
-<p>list works!</p>
+<div class="flex min-h-screen"> 
+    <div class="flex-1 pl-10 m-5 overflow-y-auto">
+        <h1 class="text-8xl text-black font-[LoveNature] ">Bookings</h1>
+        <p class="text-xl ">Manage Your Bookings Effortlessly ✍</p>
+
+        <div class="text-center pl-5 justify-center items-center pt-20">
+            <table class="min-w-[70vw]  border-collapse border border-gray-300">
+                <thead>
+                  <tr class="text-xl text-white">
+                    <th class="border border-gray-400 bg-gray-950  px-4 py-2">Name</th>
+                    <th class="border border-gray-800 px-4 py-2 bg-gray-950 text-white">Email</th>
+                    <th class="border border-gray-800 px-4 py-2 bg-gray-950 text-white">Message</th>
+                    <th class="border border-gray-800 px-4 py-1 bg-gray-950 text-white">Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let booking of bookings">
+                        <td class="border border-gray-800 px-4 py-2">{{ booking.name }}</td>
+                        <td class="border border-gray-800 px-4 py-2">{{ booking.email }}</td>
+                        <td class="border border-gray-800 px-4 py-2">{{ booking.message }}</td>
+                        <td class="border border-gray-800 px-4 py-2">{{ booking.date | date: 'short' }}</td>
+                    </tr>
+                </tbody>
+                </table>
+                
+        </div>
+    </div>
+</div>

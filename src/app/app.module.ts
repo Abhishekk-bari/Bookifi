@@ -21,6 +21,7 @@ import { TestimonialComponent } from './components/testimonial/testimonial.compo
 import { MoreComponent } from './components/more/more.component';
 import { ListComponent } from './pages/list/list.component';
 import { DashHomeComponent } from './pages/dash-home/dash-home.component';
+import {MatDatepickerModule} from '@angular/material/datepicker'
 
 @NgModule({
   declarations: [
