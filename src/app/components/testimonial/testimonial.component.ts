@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './testimonial.component.css'
 })
 export class TestimonialComponent {
+  
 
 }

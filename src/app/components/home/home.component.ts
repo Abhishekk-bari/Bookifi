@@ -7,6 +7,9 @@ import {
   HostListener,
 } from '@angular/core';
 
+import { gsap } from 'gsap';
+import SplitType from 'split-type';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -20,6 +23,23 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
 
   ngAfterViewInit() {
     const slider = this.sliderRef.nativeElement;
+    const splitText = new SplitType('.text-animation', { types: 'chars' });
+
+
+    gsap.from(splitText.chars, {
+      duration: 1.0,
+      opacity: 0,
+      y: 50,
+      stagger: 0.1,
+      ease: 'back.out(10)'
+    });
+    gsap.from(splitText.chars, {
+      duration: 0.5,
+      opacity: 0,
+      y: 20,
+      stagger: 0.05,
+      ease: 'power2.out'
+    });
 
     // Clone slides for infinite effect
     const slides = Array.from(slider.children) as HTMLElement[];
