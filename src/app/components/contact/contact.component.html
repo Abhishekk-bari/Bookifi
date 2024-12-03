@@ -1,66 +1,78 @@
-<div class="h-[50vw] flex flex-row justify-center items-center">
-    <div class="text-center">
-        <h1 class="text-8xl pb-20 font-[ApothemCapsMedium]">Let's Talk</h1>
-        <form (ngSubmit)="onSubmit()" class="space-y-4 pb-20 ">
-            <div>
-              <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-              <input
-                type="text"
-                id="name"
-                [(ngModel)] = "formData.name"
-                name="name"
-                class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                placeholder="Enter your name"
-                required
-              />
-            </div>
-            <div>
-              <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-              <input
-                type="email"
-                id="email"
-                [(ngModel)]="formData.email"
-                name="email"
-                class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                placeholder="Enter your email"
-                required
-              />
-            </div>
-            <div>
-              <label for="number" class="block text-sm font-medium text-gray-700">Phone Number</label>
-              <input
-                type="tel"
-                id="number"
-                [(ngModel)]="formData.number"
-                name="number"
-                class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                placeholder="Enter your phone number"
-                required
-              />
-            </div>
-            <div>
-              <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                [(ngModel)]="formData.message"
-                rows="4"
-                class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                placeholder="Write your message"
-                required
-              ></textarea>
-            </div>
-            
-            
-            <button
-              type="submit"
-              class="w-full bg-[#b4e925] text-zinc-900 py-2 px-4 rounded-md hover:bg-lime-300 transition duration-300"
-            >
-              Send
-            </button>
-          </form>
-    </div>
-</div>
-<app-footer></app-footer>
+<div class="h-[50vw] bg-[#f8f7f2] flex flex-row justify-center items-center p-28">
+  <!-- Left Text Section -->
+  <div class="flex-1 text-left p-10 ">
+    <p class="text-lg font-semibold mb-2">Let's Talk</p>
+ 
+    <h1 class="text-5xl font-bold mb-6">Capture your moments <span class="text-yellow-500">with ease</span></h1>
+    <p class="text-gray-500 text-base mb-8">Trusted by professionals and individuals alike. Let us help you preserve memories you'll cherish forever.
+    </p>
+    <img src="dotted.png" class="w-40 h-32 absolute translate-x-[20vw] "/>
+  </div>
 
+  <!-- Right Form Section -->
+  <div class="flex-1 bg-white shadow-md rounded-xl p-5 ">
+    <h2 class="text-2xl font-semibold mb-6 ">Contact Me</h2>
+    <hr class="border-t-2 border-dotted border-gray-300 my-4" />
+    <form (ngSubmit)="onSubmit()" class="space-y-4">
+      <div>
+        <label for="name" class="block text-sm font-medium text-gray-700">Name *</label>
+        <input
+          type="text"
+          id="name"
+          [(ngModel)]="formData.name"
+          name="name"
+          class="mt-1 block w-full p-2 border border-gray-300 rounded-md "
+          placeholder="Enter your name"
+          required
+        />
+      </div>
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700">Email *</label>
+        <input
+          type="email"
+          id="email"
+          [(ngModel)]="formData.email"
+          name="email"
+          class="mt-1 block w-full p-2 border border-gray-300 rounded-md"
+          placeholder="Enter your email"
+          required
+        />
+      </div>
+      <div>
+        <label for="number" class="block text-sm font-medium text-gray-700">Phone Number *</label>
+        <input
+          type="tel"
+          id="number"
+          [(ngModel)]="formData.number"
+          name="number"
+          class="mt-1 block w-full p-2 border border-gray-300 rounded-md "
+          placeholder="Enter your phone number"
+          required
+        />
+      </div>
+      <div>
+        <label for="message" class="block text-sm font-medium text-gray-700">Message *</label>
+        <textarea
+          id="message"
+          name="message"
+          [(ngModel)]="formData.message"
+          rows="4"
+          class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+          placeholder="Write your message"
+          required
+        ></textarea>
+      </div>
+      <button
+        type="submit"
+        class="w-full bg-[#b4e925] text-zinc-900 py-2 px-4 rounded-md hover:bg-lime-300 transition duration-300"
+      >
+        Send
+      </button>
+    </form>
     
+  </div>
+  
+  
+</div>
+
+<app-footer></app-footer>
