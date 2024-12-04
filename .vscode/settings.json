@@ -3,6 +3,7 @@
         "dhome",
         "iscontact",
         "primeng",
+        "Swal",
         "Toastr"
     ]
 }

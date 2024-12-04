@@ -15,13 +15,12 @@ import { AuthService } from './auth.service';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ToastrModule } from 'ngx-toastr';
 import { ContactComponent } from './components/contact/contact.component';
 import { TestimonialComponent } from './components/testimonial/testimonial.component';
 import { MoreComponent } from './components/more/more.component';
 import { ListComponent } from './pages/list/list.component';
 import { DashHomeComponent } from './pages/dash-home/dash-home.component';
-import {MatDatepickerModule} from '@angular/material/datepicker'
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -38,17 +37,16 @@ import {MatDatepickerModule} from '@angular/material/datepicker'
     MoreComponent,
     ListComponent,
     DashHomeComponent
-    
   ],
   imports: [
     BrowserAnimationsModule,
-    ToastrModule.forRoot({
-      timeOut: 1000, // Toast timeout in milliseconds
-      positionClass: 'toast-top-right', // Position of the toast
-      preventDuplicates: true, // Prevent duplicate toasts
-    }),
     HttpClientModule,
     BrowserModule,
+    ToastrModule.forRoot({
+      positionClass: 'toast-top-right', // Change position as needed
+      timeOut: 3000,                   // Duration of the toast
+      preventDuplicates: true          // Prevent duplicate toasts
+    }),
     AppRoutingModule,
     ButtonModule,
     ReactiveFormsModule,

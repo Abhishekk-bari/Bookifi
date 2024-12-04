@@ -11,8 +11,8 @@
             class="pl-1 border border-zinc-800 rounded-lg " />
         </div>
         
-       
 
+        
         <div class="text-center pl-10 justify-center items-center pt-20">
             <table class="min-w-[70vw]  border-collapse border border-gray-300">
                 <thead>
@@ -21,6 +21,7 @@
                     <th class="border border-gray-400 px-4 py-2 bg-blue-700 text-white">Email</th>
                     <th class="border border-gray-400 px-4 py-2 bg-blue-700 text-white">Message</th>
                     <th class="border border-gray-400 px-4 py-1 bg-blue-700 text-white">Date</th>
+                    <th class="border border-gray-400 px-4 py-1 bg-blue-700 text-white">Actions</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -29,11 +30,18 @@
                         <td class="border border-gray-800 px-4 py-2">{{ booking.email }}</td>
                         <td class="border border-gray-800 px-4 py-2">{{ booking.message }}</td>
                         <td class="border border-gray-800 px-4 py-2">{{ booking.date | date: 'short' }}</td>
+                        <td class="border border-gray-800">
+                            <!-- <button  (click)="updateBooking(booking)">
+                                <img src="pencil_icon.png" alt="Update_icon" style="width: 28px; height: 28px;" />
+                            </button> -->
+                            <button (click)="deleteBooking(booking._id)">
+                                <img src="deleticon.png" alt="Delete" style="width: 28px; height: 28px;">
+                            </button>
+                        </td>
                     </tr>
                 </tbody>
                 </table>
                 
         </div>
-        
     </div>
 </div>

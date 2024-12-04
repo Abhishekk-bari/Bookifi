@@ -21,4 +21,14 @@ export class FormService {
     return this.http.get(url);
   }
 
+  // Delete booking by ID
+  deleteBooking(id: string): Observable<any> {
+    return this.http.delete(`${this.fetchUrl}/${id}`);
+  }
+
+  // Update booking by ID
+  updateBooking(id: string, updatedData: any): Observable<any> {
+    return this.http.put(`${this.fetchUrl}/${id}`, updatedData);
+  }
+
 }
