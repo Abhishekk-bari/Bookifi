@@ -1,6 +1,12 @@
-<div class="flex flex-col items-center justify-center min-h-screen min-w-screen bg-zinc-50 ">
+<div class="flex flex-col items-center justify-center min-h-screen min-w-screen bg-zinc-50 relative">
+    <!-- Image behind the text -->
+    <img src="shape2.png" class="absolute top-0 left-56 w-40 h-40 object-cover z-0 bounce-effect" />
+
     <!-- Heading -->
-    <h1 class="text-8xl mb-28 pr-[50vw] font-[ApothemCapsMedium]">wait<span class="text-[#b4e925]">....</span><br>There is more!</h1>
+    <h1 class="text-8xl mb-28 pr-[50vw] font-[ApothemCapsMedium] relative z-10">
+        wait<span class="text-[#b4e925]"></span><br>There is <span class="text-[#b800ff]">more !</span>
+    </h1>
+
 
     <!-- Cards Section -->
     <div class="grid grid-cols-1 gap-28 md:grid-cols-2 lg:grid-cols-3">
@@ -41,4 +47,5 @@
     </div>
     
 </div>
-<hr class="border-t-2 border-gray-300 my-4" />
+<!-- <hr class="border-t-2 border-gray-300 my-4" /> -->
+<app-review></app-review>

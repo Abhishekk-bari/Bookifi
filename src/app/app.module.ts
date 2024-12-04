@@ -21,6 +21,7 @@ import { MoreComponent } from './components/more/more.component';
 import { ListComponent } from './pages/list/list.component';
 import { DashHomeComponent } from './pages/dash-home/dash-home.component';
 import { ToastrModule } from 'ngx-toastr';
+import { ReviewComponent } from './components/review/review.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ToastrModule } from 'ngx-toastr';
     TestimonialComponent,
     MoreComponent,
     ListComponent,
-    DashHomeComponent
+    DashHomeComponent,
+    ReviewComponent,
   ],
   imports: [
     BrowserAnimationsModule,

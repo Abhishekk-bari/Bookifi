@@ -1,33 +1,60 @@
-<div class="h-[55vw] ">
-    <div class="text-center pt-36 h-screen">
-        <h1 class="text-[14vw] font-bold font-[ApothemCapsRegular]">Finnegan Manor</h1>
-    </div>
-    <div class="text-center h-screen pt-5">
-        <h1 class="p-8 text-4xl">Hi there! I’m Finnegan Manroe, <br>a passionate photographer based in the vibrant city<br> of Seattle. With over a decade of experience behind the <br>lens, I specialize in capturing the unique <br>beauty of life’s fleeting moments, <br>from intimate portraits and breathtaking <br>landscapes to dynamic product shots and lively events.</h1>
+<div class="h-[55vw] relative">
+  <div class="text-center pt-36 h-screen">
+    <h1
+      class="pt-[8vw] text-[14vw] font-bold text-[#b800ff] font-[ApothemCapsRegular] absolute z-0"
+    >
+      Finnegan <span class="pl-12">Manor</span>
+    </h1>
+    <img
+      src="man1.jpg"
+      alt="Left Image"
+      class="bounce-effect ml-[42vw] mb-5 object-cover w-60 h-60 rounded relative z-10"
+    />
+  </div>
+  <div class="text-center h-screen pt-5">
+    <h1 class="p-8 text-4xl">
+      Hi there! I’m Finnegan Manroe, <br />a passionate photographer based in
+      the vibrant city<br />
+      of Seattle. With over a decade of experience behind the <br />lens, I
+      specialize in capturing the unique <br />beauty of life’s fleeting
+      moments, <br />from intimate portraits and breathtaking <br />landscapes
+      to dynamic product shots and lively events.
+    </h1>
+  </div>
+
+  <div class="h-screen w-screen flex">
+    <!-- Left Side Image -->
+    <div class="w-1/2 h-full p-4">
+      <img src="man1.jpg" alt="Left Image" class="object-cover w-full h-full" />
     </div>
 
-    <div class="h-screen w-screen flex ">
-        <!-- Left Side Image -->
-        <div class="w-1/2 h-full p-4">
-            <img src="man1.jpg" alt="Left Image" class="object-cover w-full h-full">
-        </div>
-        
-        <!-- Right Side Content -->
-        <div class="w-1/2 h-full flex ">
-            <div class="p-8">
-                <h1 class="text-2xl">My journey into photography began as a curious child with a disposable camera, fascinated by the world’s colors and light. Over the years, this hobby transformed into a full-blown love affair with visual storytelling. Each click of the shutter is my way of freezing time, preserving emotions, and narrating stories that words alone can’t convey.</h1>
-                <p class=" pt-28 text-xl">I’ve had the privilege of working with amazing clients <span>honored with several awards</span></p>
-                <h1 class="pt-20 text-2xl">Let’s create something extraordinary together. Whether you’re looking to capture a special moment, need stunning visuals for your brand, or simply want to explore the world through my lens, I’d love to hear from you!</h1>
-                
-                <button class="mt-16  p-2 gap-3 border border-black text-black text-xl font-semibold hover:bg-white hover:text-black transition-all duration-300">
-                    BOOK A SESSION
-                   
-                  </button>
-                  
-            </div>
-            
-        </div>
-    </div>
-  
+    <!-- Right Side Content -->
+    <div class="w-1/2 h-full flex">
+      <div class="p-8">
+        <h1 class="text-2xl">
+          My journey into photography began as a curious child with a disposable
+          camera, fascinated by the world’s colors and light. Over the years,
+          this hobby transformed into a full-blown love affair with visual
+          storytelling. Each click of the shutter is my way of freezing time,
+          preserving emotions, and narrating stories that words alone can’t
+          convey.
+        </h1>
+        <p class="pt-28 text-xl">
+          I’ve had the privilege of working with amazing clients
+          <span>honored with several awards</span>
+        </p>
+        <h1 class="pt-20 text-2xl">
+          Let’s create something extraordinary together. Whether you’re looking
+          to capture a special moment, need stunning visuals for your brand, or
+          simply want to explore the world through my lens, I’d love to hear
+          from you!
+        </h1>
 
+        <button routerLink="/contact"
+          class="mt-16 p-2 gap-3 border border-black text-black text-xl font-semibold hover:text-[#b800ff] transition-all duration-300">
+          BOOK A SESSION
+        </button>
+      </div>
+    </div>
+  </div>
 </div>

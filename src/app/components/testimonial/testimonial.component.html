@@ -1,12 +1,17 @@
 <div class="w-screen h-[55vw] flex pt-10">
     
     <!-- Left side with "Gallery" text -->
-    <div class="w-1/2 h-screen flex flex-col items-center justify-center sticky top-10">
-        <h1 class="text-9xl font-[ApothemCapsMedium]">Gallery</h1>
-        <p class="text-lg text-gray-700 mt-4 p-20 ">
+    <div class="w-1/2 h-screen flex flex-col items-center justify-center top-10 relative">
+        <!-- Image behind text -->
+        <img src="shape.png" class="absolute top-0 left-10 w-40 h-40 object-cover z-0 bounce-effect" />
+    
+        <!-- Text content in front -->
+        <h1 class="text-9xl font-[ApothemCapsMedium] relative z-10">Galler<span class="text-[#b800ff]">y</span></h1>
+        <p class="text-lg text-gray-700 mt-4 p-20 relative z-10">
             Capturing life's precious moments through the lens of a camera is not just about taking pictures, it's about telling stories that evoke emotions and spark connections. It's about freezing time, capturing the essence of a moment, and preserving memories for generations to come.
         </p>
     </div>
+    
 
     <!-- Right side with scrolling images -->
     <div class="w-1/2 h-screen overflow-y-scroll p-5 no-scrollbar ">
